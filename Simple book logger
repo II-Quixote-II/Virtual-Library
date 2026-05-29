@@ -1,0 +1,13 @@
+# Schema
+
+CREATE TABLE Books ( id INTEGER PRIMARY KEY, 
+Title TEXT NOT NULL, 
+Author TEXT NOT NULL, 
+Read_status TEXT DEFAULT 'UNREAD', 
+Rating TEXT NOT NULL )
+
+# To Update table with a book:
+# This will add a book with ID 2/Row 2 (Second Book) with Title, Author, "To Be Read Next" as its read_status, and TBR (To Be Rated) as its rating 
+
+INSERT INTO Books Values (2, "Don Quixote", "Cervantes", "To Be Read Next", "TBR");
+
