@@ -1,13 +1,18 @@
 # Schema
 
-CREATE TABLE Books ( id INTEGER PRIMARY KEY, 
-Title TEXT NOT NULL, 
-Author TEXT NOT NULL, 
-Read_status TEXT DEFAULT 'UNREAD', 
-Rating TEXT NOT NULL )
-
-# To Update table with a book:
-# This will add a book with ID 2/Row 2 (Second Book) with Title, Author, "To Be Read Next" as its read_status, and TBR (To Be Rated) as its rating 
-
-INSERT INTO Books Values (2, "Don Quixote", "Cervantes", "To Be Read Next", "TBR");
+CREATE TABLE Book_Shelves (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+Title TEXT NOT NULL,
+Author TEXT NOT NULL,
+Genre TEXT,
+Read_Status TEXT DEFAULT 'Unread',
+Page_Count INTEGER,
+Pages_Read INTEGER DEFAULT 0,
+Date_Started TEXT,
+Date_Finished TEXT,
+Rating INTEGER CHECK(Rating BETWEEN 1 AND 10),
+Favourite TEXT,
+Review TEXT,
+Source TEXT
+);
 
