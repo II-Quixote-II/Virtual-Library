@@ -1,4 +1,4 @@
-# Schema
+# SQL
 
 CREATE TABLE Book_Shelves (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
