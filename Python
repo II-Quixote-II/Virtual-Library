@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('BooksQuery.db')
+conn = sqlite3.connect('database.db')
 cur = conn.cursor()
 
 cur.execute('SELECT Title, Author FROM Books WHERE ID = "2"')
@@ -12,3 +12,27 @@ for Title, Author in rows:
 conn.close()
 
 # Fetches Title and Author of Book at Row/ID 2
+
+--------------------
+
+import sqlite3
+
+conn = sqlite3.connect('database.db')
+cur = conn.cursor()
+
+cur.execute('SELECT name FROM sqlite_master WHERE type="table"')
+tables = [row[0] for row in cur.fetchall()]
+
+for table in tables:
+    print(f"\n=== {table} ===")
+    cur.execute(f'SELECT * FROM Books')
+
+    col_names = [desc[0] for desc in cur.description]
+    print(col_names)
+
+    for row in cur.fetchall():
+        print(row)  
+
+conn.close()
+
+# Fetches Entire db
