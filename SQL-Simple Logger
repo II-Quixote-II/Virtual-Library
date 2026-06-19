@@ -1,18 +1,11 @@
 # SQL
 
-CREATE TABLE Book_Shelves (
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-Title TEXT NOT NULL,
-Author TEXT NOT NULL,
-Genre TEXT,
-Read_Status TEXT DEFAULT 'Unread',
-Page_Count INTEGER,
-Pages_Read INTEGER DEFAULT 0,
-Date_Started TEXT,
-Date_Finished TEXT,
-Rating INTEGER CHECK(Rating BETWEEN 1 AND 10),
-Favourite TEXT,
-Review TEXT,
-Source TEXT
-);
-
+CREATE TABLE Books (
+    id INTEGER PRIMARY KEY,
+    Title TEXT NOT NULL,
+    Author TEXT NOT NULL,
+    Read_status TEXT DEFAULT 'UNREAD',
+    Rating TEXT NOT NULL,
+    Genre TEXT AFTER Author,
+    Date_Started TEXT,
+    Date_Finished TEXT;
