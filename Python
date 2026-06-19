@@ -10,3 +10,5 @@ for Title, Author in rows:
     print(f'Title: {Title}, Author: {Author}')
 
 conn.close()
+
+# Fetches Title and Author of Book at Row/ID 2
