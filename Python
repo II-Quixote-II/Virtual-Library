@@ -1,0 +1,12 @@
+import sqlite3
+
+conn = sqlite3.connect('BooksQuery.db')
+cur = conn.cursor()
+
+cur.execute('SELECT Title, Author FROM Books WHERE ID = "2"')
+rows = cur.fetchall()
+
+for Title, Author in rows:
+    print(f'Title: {Title}, Author: {Author}')
+
+conn.close()
