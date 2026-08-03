@@ -1,14 +1,16 @@
+# Turned the hardcoded functions into reusuable functions
+
 import sqlite3
 from pathlib import Path
  
-DB_PATH = Path(__file__).parent / "library.db"
+DB_PATH = "library.db"
  
 VALID_STATUSES = ("UNREAD", "READING", "READ", "DNF")
  
  
 def _connect() -> sqlite3.Connection:
     conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row  # lets us access columns by name
+    conn.row_factory = sqlite3.Row  
     return conn
  
  
