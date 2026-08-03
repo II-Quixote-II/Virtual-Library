@@ -1,6 +1,10 @@
-This is a simple book logger, just a small project to keep track and manage books. 
 
-Plans:
+A small SQLite-based book logger for tracking what you're reading, want to read, and have finished.
 
-- Add a HTML/CSS/JS Frontend
-- Implement Python into backend for a more intuitive system of receiving inputs and adding data into the database
+Features
+- Add books with title, author, and genre
+- Track read status: UNREAD, READING, READ, DNF
+- Rate books 1–5
+- Log start/finish dates
+- Search your library by title
+- View the whole collection as a formatted table
