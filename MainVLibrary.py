@@ -2,6 +2,11 @@
 
 # Option 1: "Add Book" is WIP - SQLite3.IntegrityError
 
+# """
+# Note: Its probably because theres a mess up / misalignment in schema structure and the cur = conn.execute() function calls
+# Resulting in the NOT NULL constraint failure - I will fix that
+# """
+
 import VirtualLibrary as library
 
 MENU = """
